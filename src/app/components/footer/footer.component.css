@@ -1,0 +1,26 @@
+a{
+    color: white;
+    text-decoration: none;
+}
+
+
+li{
+    margin-left: 20px;
+    color: white;
+}
+
+.distance{
+    margin-right: 30px;
+}
+
+.placement{
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    font-size: 10px;
+}
+
+.width{
+    width: 20%;
+}

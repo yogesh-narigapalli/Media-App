@@ -1,0 +1,21 @@
+div{
+    text-align: center;
+    margin-top: 10%;
+    
+    
+}
+b{
+    color:#F3B431;
+    
+}
+.h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 10px;
+}

@@ -1,0 +1,66 @@
+<header>
+    <nav class="navbar navbar-expand bg-primary">
+      <div class="container">
+        <a routerLink="/" class="navbar-brand">Media App</a>
+      </div>
+     <div>
+       <ul class="navbar-nav">
+         <!-- <li class="navbar-item" *ngIf="homeActive">
+           <a href="#" class="navbar-link">Home</a>
+         </li> -->
+         <li class="navbar-item">
+          <a routerLink="/gallery" class="navbar-link" *ngIf="login.isLoggedIn">Gallery</a>
+        </li>
+         <li class="navbar-item">
+          <a routerLink="/about" class="navbar-link">About</a>
+        </li>
+        <li class="navbar-item" *ngIf="login.isLoggedIn">
+          <a>{{displayName}}</a>
+        </li>
+        <li class="navbar-item distance">
+          <a href="#" class="navbar-link" data-toggle="modal" data-target="#exampleModalCenter" *ngIf="!login.isLoggedIn">Login</a>
+        </li>
+        <li class="navbar-item distance">
+            <a href="#" class="navbar-link" (click)="onLogout()" *ngIf="login.isLoggedIn">Logout</a>
+          </li>
+        
+       </ul>
+     </div>
+    </nav>
+  </header>
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Log In to your account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" #closeButton (click)="logInError=''">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend pr-2 width">
+              <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" placeholder="Enter username"
+            aria-describedby="inputGroup-sizing-default" #userName>
+          
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+              >Password</span>
+            </div>
+            <input type="text" class="form-control"  aria-label="Sizing example input" placeholder="Enter password"
+            #passWord aria-describedby="inputGroup-sizing-default">
+            
+          </div>
+        </div>
+        <small class="error">{{logInError}}</small>
+        <div class="placement mb-3">
+          <button type="button" class="btn btn-primary"
+          (click)="logIn(userName.value,passWord.value)" >Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
