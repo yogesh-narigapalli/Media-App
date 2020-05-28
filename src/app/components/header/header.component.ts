@@ -30,6 +30,9 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['/']);
     
   }
+  onLoginClick(){
+    this.router.navigate(['/']);
+  }
   logIn(user,pwd){
     console.log(user.touched);
     console.log(pwd);

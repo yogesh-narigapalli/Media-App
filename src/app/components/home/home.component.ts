@@ -6,12 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  eight=[{image:"http://placeimg.com/240/240/tech",desc:"Technology"},
-  {image:"http://placeimg.com/240/240/nature",desc:"Nature"},
-  {image:"http://placeimg.com/240/240/animals",desc:"Animals"},
-  {image:"http://placeimg.com/240/240/architecture",desc:"Architecture"},
-  {image:"http://placeimg.com/240/240/people",desc:"People"},
-  {image:"http://placeimg.com/240/240/any",desc:"Any"}]
+  eight=[{image:"https://picsum.photos/id/117/240/240",desc:"Home"},
+  {image:"https://picsum.photos/id/128/240/240",desc:"Home"},
+  {image:"https://picsum.photos/id/119/240/240",desc:"Home"},
+  {image:"https://picsum.photos/id/120/240/240",desc:"Home"},
+  {image:"https://picsum.photos/id/121/240/240",desc:"Home"},
+  {image:"https://picsum.photos/id/122/240/240",desc:"Home"}]
 
   constructor() { }
 

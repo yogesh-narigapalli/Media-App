@@ -5,8 +5,8 @@
       </div>
      <div>
        <ul class="navbar-nav">
-         <!-- <li class="navbar-item" *ngIf="homeActive">
-           <a href="#" class="navbar-link">Home</a>
+         <!-- <li class="navbar-item">
+           <a routerLink="/" class="navbar-link">Home</a>
          </li> -->
          <li class="navbar-item">
           <a routerLink="/gallery" class="navbar-link" *ngIf="login.isLoggedIn">Gallery</a>
@@ -18,7 +18,8 @@
           <a>{{displayName}}</a>
         </li>
         <li class="navbar-item distance">
-          <a href="#" class="navbar-link" data-toggle="modal" data-target="#exampleModalCenter" *ngIf="!login.isLoggedIn">Login</a>
+          <a href="#" class="navbar-link" data-toggle="modal" data-target="#exampleModalCenter" *ngIf="!login.isLoggedIn" 
+          (click)="onLoginClick()">Login</a>
         </li>
         <li class="navbar-item distance">
             <a href="#" class="navbar-link" (click)="onLogout()" *ngIf="login.isLoggedIn">Logout</a>
